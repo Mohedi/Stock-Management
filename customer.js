@@ -1,4 +1,9 @@
-var customerList=[]
+var customerList=[
+	Customer('John Smith', 5112342, "Johnsmith@Wallmart.biz", "Wallmart"),
+	Customer('Adam Johnson', 5112342, "adam@gmoil.biz", "indepndent"),
+	Customer('Mehdi Farjallah', 5112342, "meh@mohedi.tn", "mohedi"),
+	Customer('Mohamed Belkheir', 5112342, "moh@mohedi.tn", "mohedi"),
+]
 
 function Customer(name, phone, email, company){
 	return {

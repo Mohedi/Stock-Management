@@ -1,5 +1,7 @@
 var quoteList = [];
 var invoiceList = [];
+var basket = [];
+var total = 0;
 
 function Quote(customerId, products, total){
 	return {

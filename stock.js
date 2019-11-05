@@ -1,4 +1,10 @@
-var  stockList =[];
+var  stockList =[
+	Stock('Phone', 300, 500, 20),
+	Stock('Laptop', 500, 700, 30),
+	Stock('Table', 20, 50, 100),
+	Stock('Chair', 15, 30, 200)
+];
+
 function Stock(name, pop, pos, quant){
 
 	return {
@@ -40,3 +46,5 @@ function Stock(name, pop, pos, quant){
 	function addStock(obj){
 		stockList.push(obj);
 	}
+
+
