@@ -9,14 +9,52 @@
 	<header>
 
 		<nav>
-			<div class="nav-btn">Add Stock </div>
-			<div class="nav-btn">Add Customer</div>
-			<div class="nav-btn quote-btn">New Quote</div>
+			<div class="nav-btn" id="add-stock">Add Stock </div>
+			<div class="nav-btn" id='add-customer'>Add Customer</div>
+			<div class="nav-btn quote-btn" id='add-quote'>New Quote</div>
 			<!--<div class="nav-btn"> </div>-->
 
 		</nav>
 
 	</header>
+
+
+	<div class="view" id='view-add-stock'>
+	
+			<div class='form'>
+				<input type="text" id='prod-name' placeholder="Add product name">
+				<input type="number" id='prod-pop' placeholder="Add price of purchase">
+				<input type="number" id='prod-pos' placeholder="Add price of sale">
+				<input type="number" id='prod-quant' placeholder="Set quantity">
+				<button id='stock-form-btn'>Add Product to Stock</button>
+			</div>
+		
+	</div>
+
+
+	<div class="view" id='view-add-customer'>
+	
+			<div class='form'>
+				<input type="text" id='cust-name' placeholder="Add customer name">
+				<input type="number" id='cust-no' placeholder="Phone number">
+				<input type="email" id='cust-mail' placeholder="Add E-mail">
+				<input type="text" id='cust-comp' placeholder="Company">
+				<button id='cust-form-btn'>Add Customer</button>
+			</div>
+		
+	</div>
+
+	<div class="view" id='view-add-quote'>
+	
+			<div class='form'>
+				<input type="text" id='prod-name' placeholder="Add product name">
+				<input type="number" id='prod-pop' placeholder="Add price of purchase">
+				<input type="number" id='prod-pos' placeholder="Add price of sale">
+				<input type="number" id='prod-quant' placeholder="Set quantity">
+				<button id='stock-form-btn'>Add Product to Stock</button>
+			</div>
+		
+	</div>
 
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -25,5 +63,8 @@
   <script type="text/javascript" src="stock.js"></script>
   <script type="text/javascript" src="customer.js"></script>
   <script type="text/javascript" src="quote.js"></script>
+  <script type="text/javascript" src="startup.js"></script>
+
+
 </body>
 </html>
