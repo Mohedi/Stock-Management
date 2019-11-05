@@ -1,6 +1,16 @@
 
 function createQuote() {
-
+	addQuote(
+		Quote(
+			$(".cs-li:selected").attr('id'),
+			basket,
+			total
+			)
+		);
+	basket = [];
+	total = 0;
+	$('#list').html('');
+	$('#total').text(0);
 }
 
 function addToBasket(){
@@ -18,17 +28,18 @@ function addToBasket(){
 
 	basket.push(basketItem);
 	var itemToPush = $('<div class="qli"></div>');
-	itemToPush.append('<span>Item: '+ item.getName()+'\t| Sale price: '+item.getPos()+'\t| Quantity: '+$('#product-quant').val());
+	var quant = $('#product-quant').val();
+	itemToPush.append('<span>Item: '+ item.getName()+'\t| Sale price: '+item.getPos()+'\t| Quantity: '+quant);
 	var button = $('<button>X</button>');
 	button.on('click', function(){
 		basket.splice(basket.indexOf(basketItem),1);
 		itemToPush.remove();
-		total -= item.getPos() * $('#product-quant').val();
+		total -= item.getPos() * quant;
 		$('#total').text(total);
 	})
 	itemToPush.append(button)
 	$('#list').append(itemToPush);
-	total += item.getPos() * $('#product-quant').val();
+	total += item.getPos() * quant;
 	$('#total').text(total);
 
 }

@@ -9,13 +9,23 @@
 	<header>
 
 		<nav>
-			<div class="nav-btn" id="add-stock">Add Stock </div>
-			<div class="nav-btn" id='add-customer'>Add Customer</div>
-			<div class="nav-btn quote-btn" id='add-quote'>New Quote</div>
+			<span>
+			    <div class="nav-btn" id="add-stock">Add Stock </div>
+			    <div class="nav-btn" id="v-stock">View Stock </div>
+		    </span>
+		    <span>
+		    	<div class="nav-btn" id='add-customer'>Add Customer</div>
+		    	<div class="nav-btn" id='v-customers'>View Customers</div>
+		    </span>
+			
+			<span>
+				<div class="nav-btn quote-btn" id='add-quote'>New Quote</div>
+				<div class="nav-btn quote-btn" id='v-quotes'>View Quotes</div>
+			</span>
+			
 			<!--<div class="nav-btn"> </div>-->
 
 		</nav>
-
 	</header>
 
 
@@ -68,6 +78,30 @@
 		</div>
 			
 		
+	</div>
+
+	<div class="view" id="view-customers">
+		<div class="listing">
+			<h2>List of Customers</h2>
+			<div class="cust-view">
+			</div>
+		</div>
+	</div>
+
+	<div class="view" id="view-stocks">
+		<div class="listing">
+			<h2>List of Stocks</h2>
+			<div class="stock-view"> 
+			</div>
+		</div>
+	</div>
+
+	<div class="view" id="view-quotes">
+		<div class="listing">
+			<h2>List of Quotes</h2>
+			<div class="quotes-view">
+			</div>
+		</div>
 	</div>
 
 <script
