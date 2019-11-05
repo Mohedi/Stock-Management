@@ -8,11 +8,13 @@ function Quote(customerId, products, total){
 		customerId: customerId,
 		products: products,
 		total: total,
+		date: new Date(),
 
 		confirm: confirm,
 		getCustomerId: getCustomerId,
 		getProducts: getProducts,
 		getTotal: getTotal,
+		getDate: getDate
 	};
 }
 
@@ -41,6 +43,11 @@ function getTotal(){
 	return this.total;
 }
 
+function getDate(){
+	return this.date.toDateString();
+}
+
 function addQuote(obj){
 	quoteList.push(obj);
 }
+

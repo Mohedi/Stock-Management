@@ -110,8 +110,8 @@ input, select {
 }
 
 .prod-item>span{
-	width: 70px;
-	margin-bottom: 10px;
+	width: 100px;
+	margin-bottom: 5px;
 }
 
 .prod-item.head {
@@ -119,6 +119,21 @@ input, select {
 	height: 20px;
 }
 
-.stock-view, .cust-view {
+
+.stock-view, .cust-view, .quotes-view {
 	width: 50vw;
+}
+
+.quote-item {
+	background-color: #AAA;
+}
+
+.quote-head {
+	height: 10px;
+	background-color: #E2E2E2;
+}
+
+.quote-list {
+	background-color: #EEE;
+	padding: 0;
 }

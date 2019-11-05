@@ -40,6 +40,7 @@ $('#v-customers').on('click',function(){
 })
 
 $('#v-quotes').on('click',function(){
+	getListOfQuotes();
 	$(".view").hide("slow");
 	$("#view-quotes").toggle('slow')
 })
