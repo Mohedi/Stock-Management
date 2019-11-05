@@ -28,11 +28,13 @@ $('#add-quote').on('click', function(){
 })
 
 $('#v-stock').on('click',function(){
+	getListOfStock();
 	$(".view").hide("slow");
 	$("#view-stocks").toggle('slow')
 })
 
 $('#v-customers').on('click',function(){
+	getListOfCustomers();
 	$(".view").hide("slow");
 	$("#view-customers").toggle('slow')
 })
