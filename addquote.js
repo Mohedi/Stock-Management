@@ -27,6 +27,28 @@ function addToBasket(){
 	}
 
 	basket.push(basketItem);
+	var itemToPush = $('<div class="qli prod-item"></div>');
+	var quant = $('#product-quant').val();
+
+	//itemToPush.append('<span>Item: '+ item.getName()+'\t| Sale price: '+item.getPos()+'\t| Quantity: '+quant);
+	itemToPush.append('<span>'+item.getName()
+	    +'</span><span>'+item.getPos()
+		+'</span><span>'+quant+'</span>');
+	var button = $('<button class="remove"></button>');
+
+	button.on('click', function(){
+		basket.splice(basket.indexOf(basketItem),1);
+		itemToPush.remove();
+		total -= item.getPos() * quant;
+		$('#total').text(total);
+	})
+
+	itemToPush.append(button)
+	$('#list').append(itemToPush);
+	total += item.getPos() * quant;
+	$('#total').text(total);
+/*
+	basket.push(basketItem);
 	var itemToPush = $('<div class="qli"></div>');
 	var quant = $('#product-quant').val();
 	itemToPush.append('<span>Item: '+ item.getName()+'\t| Sale price: '+item.getPos()+'\t| Quantity: '+quant);
@@ -40,6 +62,6 @@ function addToBasket(){
 	itemToPush.append(button)
 	$('#list').append(itemToPush);
 	total += item.getPos() * quant;
-	$('#total').text(total);
+	$('#total').text(total);*/
 
 }

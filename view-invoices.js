@@ -1,14 +1,13 @@
-function getListOfQuotes(){
-	$('.quotes-view').html('');
-	$('.quotes-view').append(`<div class='prod-item head'>
-					<span>Quote N°</span>
+function getListOfInvoices(){
+	$('.invoices-view').html('');
+	$('.invoices-view').append(`<div class='prod-item head'>
+					<span>Invoice N°</span>
 					<span>Date</span>
 					<span>Customer</span>
 					<span>Total</span>
-					<span>Confirm</span>
 					</div>`
 					)
-	quoteList.forEach(function(element, i){
+	invoiceList.forEach(function(element, i){
 		var bigDiv = $('<div style="display:flex; flex-direction: column"></div>');
 		var smallDiv = $('<div class="prod-item quote-item" id="'+i+'">'
 			+'<span>'+i
@@ -16,12 +15,7 @@ function getListOfQuotes(){
 			+ '</span><span>'+customerList[element.getCustomerId()].getName()
 			+ '</span><span>'+ element.getTotal()
 			+ '</div>');
-		var confirmBtn = $('<button>Confirm Sale</button>');
-		confirmBtn.on('click', function(){
-			element.confirm();
-			getListOfQuotes();
-		})
-		smallDiv.append(confirmBtn); 
+		 
 		bigDiv.append(smallDiv);
 
 		var slideDiv = $('<div class="sliding"></div>');
@@ -45,14 +39,6 @@ function getListOfQuotes(){
 		smallDiv.on('click', function(){
 			slideDiv.toggle('fast');
 		})
-
-		var delBtn = $('<button>Delete</button>');
-		delBtn.on('click', function(){
-			quoteList.splice(i, 1);
-			getListOfQuotes();
-		})
-		bigDiv.append(delBtn);
-
-		$('.quotes-view').append(bigDiv)
+		$('.invoices-view').append(bigDiv)
 	})
 }

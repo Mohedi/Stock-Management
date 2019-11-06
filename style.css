@@ -7,6 +7,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	align-content: center;
+	font-family: monospace;
 }
 
 header{
@@ -21,7 +22,8 @@ header{
 	justify-content: center;
 	display: flex;
 	flex-direction: column;
-	font-family: ariel;
+	align-content: baseline;
+
 }
 
 .nav-btn.quote-btn{
@@ -74,8 +76,10 @@ input, select {
     cursor:pointer;
     vertical-align:middle;
     max-width: 100px;
-   
+   	vertical-align: center;
     text-align: center;
+    align-items: center;
+    align-content: center;
 }
 .nav-btn:active {
 
@@ -109,7 +113,7 @@ input, select {
 	padding: 20px;
 }
 
-.prod-item>span{
+.prod-item>span, .prod-item>button{
 	width: 100px;
 	margin-bottom: 5px;
 }
@@ -120,7 +124,7 @@ input, select {
 }
 
 
-.stock-view, .cust-view, .quotes-view {
+.stock-view, .cust-view, .quotes-view, .invoices-view {
 	width: 50vw;
 }
 
@@ -136,4 +140,8 @@ input, select {
 .quote-list {
 	background-color: #EEE;
 	padding: 0;
+}
+.remove{
+	 background-image: url("x.png"); ;
+	
 }

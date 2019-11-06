@@ -25,6 +25,11 @@ $('#add-quote').on('click', function(){
 	$(".view").hide("slow");
 	$('#view-add-quote').toggle('slow');
 
+
+	/******************************************/
+	$('#list').html('');
+	
+
 })
 
 $('#v-stock').on('click',function(){
@@ -45,9 +50,14 @@ $('#v-quotes').on('click',function(){
 	$("#view-quotes").toggle('slow')
 })
 
-$('#stock-form-btn').on('click',createStock)
+$('#v-invoices').on('click',function(){
+	getListOfInvoices();
+	$(".view").hide("slow");
+	$("#view-invoices").toggle('slow')
+})	
+//$('#stock-form-btn').on('click',createStock)
 
-$('#cust-form-btn').on('click',createCustomer)
+//$('#cust-form-btn').on('click',createCustomer)
 
 $('#add-item-btn').on('click',addToBasket)
 

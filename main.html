@@ -10,17 +10,21 @@
 
 		<nav>
 			<span>
-			    <div class="nav-btn" id="add-stock">Add Stock </div>
-			    <div class="nav-btn" id="v-stock">View Stock </div>
+			    <div class="nav-btn" id="add-stock"><span>Add Stock</span> </div>
+			    <div class="nav-btn" id="v-stock"><span>View Stock</span> </div>
 		    </span>
 		    <span>
-		    	<div class="nav-btn" id='add-customer'>Add Customer</div>
-		    	<div class="nav-btn" id='v-customers'>View Customers</div>
+		    	<div class="nav-btn" id='add-customer'><span>Add Customer</span></div>
+		    	<div class="nav-btn" id='v-customers'><span>View Customers</span></div>
 		    </span>
 			
 			<span>
-				<div class="nav-btn quote-btn" id='add-quote'>New Quote</div>
-				<div class="nav-btn quote-btn" id='v-quotes'>View Quotes</div>
+				<div class="nav-btn quote-btn" id='add-quote'><span>New Quote</span></div>
+				<div class="nav-btn quote-btn" id='v-quotes'><span>View Quotes</span></div>
+			</span>
+
+			<span>
+				<div class="nav-btn invoice-btn" id='v-invoices'><span>View Invoices</span></div>
 			</span>
 			
 			<!--<div class="nav-btn"> </div>-->
@@ -31,34 +35,36 @@
 
 	<div class="view" id='view-add-stock'>
 	
-			<div class='form'>
-				<input class='in' type="text" id='prod-name' placeholder="Add product name">
-				<input class='in' type="number" id='prod-pop' placeholder="Add price of purchase">
-				<input class='in' type="number" id='prod-pos' placeholder="Add price of sale">
-				<input class='in' type="number" id='prod-quant' placeholder="Set quantity">
-				<button id='stock-form-btn'>Add Product to Stock</button>
-			</div>
+			 <form  action="JavaScript:createStock()" method="" class="form">
+				<input class='in' type="text" id='prod-name' placeholder="Add product name" required>
+				<input class='in' type="number" id='prod-pop' placeholder="Add price of purchase" required>
+				<input class='in' type="number" id='prod-pos' placeholder="Add price of sale" required>
+				<input class='in' type="number" id='prod-quant' placeholder="Set quantity" required>
+				<!--<button id='stock-form-btn'>Add Product to Stock</button>-->
+				<input type="submit" value="Add Product to Stock" id='stock-form-btn' >
+			 </form>
 		
 	</div>
 
 
 	<div class="view" id='view-add-customer'>
-	
-			<div class='form'> 
-				<input class='in' type="text" id='cust-name' placeholder="Add customer name">
-				<input class='in' type="number" id='cust-no' placeholder="Phone number">
-				<input class='in' type="email" id='cust-mail' placeholder="Add E-mail">
-				<input class='in' type="text" id='cust-comp' placeholder="Company">
-				<button id='cust-form-btn'>Add Customer</button>
-			</div>
-		
+	   <form action="JavaScript:createCustomer()" class="form">
+			<!--<div class='form'> -->
+				<input class='in' type="text" id='cust-name' placeholder="Add customer name" required>
+				<input class='in' type="number" id='cust-no' placeholder="Phone number" required>
+				<input class='in' type="email" id='cust-mail' placeholder="Add E-mail"  required>
+				<input class='in' type="text" id='cust-comp' placeholder="Company" required>
+				<!--<button id='cust-form-btn'>Add Customer</button>-->
+				 <input type="submit" value="Add Customer" id="cust-form-btn">
+			<!--</div>-->
+		</form>
 	</div>
 
 	<div class="view" id='view-add-quote'>
 		<div class='quote-holder'>
 			<div class='form'>
 				<div class='quote-form'>
-				<select class='in' id='customer-list'></select>
+				<select class='in' id='customer-list' placeholder="Select customer"></select>
 				<select class='in' id='product-list'></select>
 				<input class='in' type="number" id='product-quant'>
 				<button id='add-item-btn'>Add Item</button>
@@ -69,11 +75,17 @@
 
 			<div class='list-items'>
 				<h2>Items in basket</h2>
+				<div class='prod-item head'>
+					<span>Product</span>
+					<span>Sale price</span>
+					<span>Quantit</span>
+					</div>
+					
 				<div id='list'>
 					
 					
 				</div>
-				<div>total: $<span id='total'></span></div>
+				<div>Total: $<span id='total'></span></div>
 			</div>
 		</div>
 			
@@ -105,6 +117,14 @@
 		</div>
 	</div>
 
+	<div class="view" id="view-invoices">
+		<div class="listing">
+			<h2>List of Invoices</h2>
+			<div class="invoices-view">
+			</div>
+		</div>
+	</div>
+
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -118,6 +138,7 @@
   <script type="text/javascript" src="view-stock.js"></script>
   <script type="text/javascript" src="view-customers.js"></script>
   <script type="text/javascript" src="view-quotes.js"></script>
+  <script type="text/javascript" src="view-invoices.js"></script>
 
 
   <script type="text/javascript" src="startup.js"></script>

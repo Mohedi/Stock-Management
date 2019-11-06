@@ -13,23 +13,36 @@ function Stock(name, pop, pos, quant){
 		pos: pos,
 		quant: quant,
 
-		getPop:getPop,
+		getPop: getPop,
+		setPop: setPop,
 		getPos: getPos,
-		getName:getName,
-		getQuant:getQuant,
-		setQuant:setQuant,	
+		setPos: setPos,
+		getName: getName,
+		getQuant: getQuant,
+		setQuant: setQuant,	
+		changeQuant: changeQuant 
 	}
 }
 
-
+	
 	function getPop(){
 		return this.pop;
+	}
+
+	function setPop(pop){
+		this.pop=pop;
+		return pop;
 	}
 
 	function getPos(){
 		return this.pos;
 	}
 
+	function setPos(pos){
+		this.pos=pos;
+		return pos;
+	}
+	
 	function getName(){
 		return this.name;
 	}
@@ -40,6 +53,9 @@ function Stock(name, pop, pos, quant){
 
 	function setQuant(number){
 		return this.quant+=number;
+	}
+	function changeQuant(number){
+		return this.quant = number
 	}
 
 
