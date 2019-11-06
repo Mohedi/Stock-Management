@@ -1,0 +1,147 @@
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #EFEFEF;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	font-family: monospace;
+}
+
+header{
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	height: 50px;
+}
+.nav-btn{
+	background-color: #EFEFEF;
+	height: 100%;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-content: baseline;
+
+}
+
+.nav-btn.quote-btn{
+	background-color: #FF6F61;
+}
+nav{
+	display: flex;
+	justify-content: space-around;
+	height: 100%;
+	width: 100vw;
+}
+
+.view {
+	margin-top: 50px;
+	background-color: #D8D8D8;
+	width: 70vw;
+	height: auto;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	padding: 30px 0px 30px 0px;
+}
+
+.listing{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+}
+.form, .quote-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+}
+
+input, select {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+/****************************/
+.nav-btn {
+    display:inline-block;
+    color:#444;
+    border:1px solid #CCC;
+    background:#DDD;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+    cursor:pointer;
+    vertical-align:middle;
+    max-width: 100px;
+   	vertical-align: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+.nav-btn:active {
+
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+    font-weight: bold;
+}
+
+.quote-holder {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: space-around;
+}
+
+.list-items {
+	display: flex;
+	flex-direction: column;
+	align-self: flex-start;
+}
+
+.quote-form {
+	box-shadow: 1px 1px 1px 1px grey;
+	margin-bottom: 40px;	
+	padding: 5px;
+}
+
+.prod-item {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid black;
+	padding: 20px;
+}
+
+.prod-item>span, .prod-item>button{
+	width: 100px;
+	margin-bottom: 5px;
+}
+
+.prod-item.head {
+	background-color: #CCC;
+	height: 20px;
+}
+
+
+.stock-view, .cust-view, .quotes-view, .invoices-view {
+	width: 50vw;
+}
+
+.quote-item {
+	background-color: #AAA;
+}
+
+.quote-head {
+	height: 10px;
+	background-color: #E2E2E2;
+}
+
+.quote-list {
+	background-color: #EEE;
+	padding: 0;
+}
+.remove{
+	 background-image: url("x.png"); ;
+	
+}
